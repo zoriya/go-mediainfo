@@ -1,1 +1,1 @@
-module github.com/zelenin/go-mediainfo
+module github.com/zoriya/go-mediainfo
