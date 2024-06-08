@@ -1,7 +1,6 @@
 package mediainfo
 
 // #include <mediainfo.h>
-// #cgo CFLAGS: -DUNICODE
 // #cgo LDFLAGS: -ldl -lmediainfo
 import "C"
 import (
@@ -46,9 +45,6 @@ const (
 )
 
 func init() {
-    str := C.CString("")
-    defer C.free(unsafe.Pointer(str))
-    C.setlocale(C.LC_CTYPE, str)
     C.MediaInfoDLL_Load()
 }
 
